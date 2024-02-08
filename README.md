@@ -48,3 +48,7 @@ moonrise: Local time of moonrise
 moonset: Local time of moonset
 moon_phase: Current moon phase
 moon_illumination: Moon illumination percentage
+
+# Dashboard
+
+![Imgur](https://i.imgur.com/oAZw4qx.png)
