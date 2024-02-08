@@ -9,7 +9,7 @@ df['last_updated'] = pd.to_datetime(df['last_updated'])
 app = dash.Dash(__name__)
 
 average_temperature = df.groupby(['latitude', 'longitude', 'location_name']).agg({'temperature_celsius': 'mean'}).reset_index()
-average_temperature['temperature_celsius'] = round(average_temperature['temperature_celsius'], 2)  # Arredonde para 2 casas decimais
+average_temperature['temperature_celsius'] = round(average_temperature['temperature_celsius'], 2)  
 
 mapbox_plot = px.scatter_mapbox(average_temperature, lat='latitude', lon='longitude', hover_name='location_name',
                                 color='temperature_celsius', title='Average Temperature Map')
