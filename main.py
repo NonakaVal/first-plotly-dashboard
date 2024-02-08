@@ -32,15 +32,13 @@ line_plot.update_traces(line=dict(width=3), marker=dict(size=12, line=dict(width
 
 
 app.layout = html.Div([
-
     html.H1("Exploratory analysis of climate data", style={'text-align': 'center', 'font-family': 'Arial, sans-serif', 'font-size': '2em', 'margin-top': '50px'}),
-
+  
     html.Div([
         dcc.Graph(figure=line_plot, id='line-plot', style={'width': '50%', 'flex': 1}),
-
         dcc.Graph(figure=mapbox_plot, id='mapbox-plot', style={'width': '50%', 'flex': 1, 'marginRight': '30px'}),
     ], style={'width': '130%', 'display': 'flex', 'justify-content': 'space-between', 'margin': 'auto'}),
-
+  
     html.Div([
         dcc.Graph(figure=box_chart, id='box-chart', style={'width': '100%', 'flex': 1, 'margin-top': '20px'}),
     ], style={'width': '100%', 'display': 'flex', 'justify-content': 'center'}),
